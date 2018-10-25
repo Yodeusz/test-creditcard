@@ -21,7 +21,7 @@ public class CreditCardTest {
     
     @Test
     public void canBlockCard() {
-        Card card = new Card();
+        CreditCard card = new CreditCard();
         
         card.block();
         
