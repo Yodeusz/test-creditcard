@@ -19,12 +19,19 @@ public class CreditCardTest {
 
     }
     
-    @Test()
+    @Test
     public void cantWithdrawWhenOverTheLimit() throws Exception {
         CreditCard card = new CreditCard();
         card.assignLimit(50);
         boolean withdrawSuccess = card.withdraw(100);
         Assert.assertFalse(withdrawSuccess);
+    }
+    
+    @Test
+    public void canWithdrawWhenInLimit() {
+        CreditCard card = new CreditCard();
+        card.assignLimit(500);
+        Assert.assertTrue(card.withdraw(300));
     }
     
     @Test
