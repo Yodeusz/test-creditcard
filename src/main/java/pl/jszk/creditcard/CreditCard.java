@@ -24,8 +24,9 @@ class CreditCard {
         double limitAfterWithdraw = this.limit - money;
         if (limitAfterWithdraw <= 0) {
             return false;
+        } else {
+            this.limit = limitAfterWithdraw;
+            return true;
         }
-        this.limit = limitAfterWithdraw;
-        return true;
     }
 }
