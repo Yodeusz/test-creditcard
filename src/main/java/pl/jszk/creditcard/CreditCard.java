@@ -29,4 +29,8 @@ class CreditCard {
             return true;
         }
     }
+    
+    public void repay(double money) {
+        this.limit += money;
+    }
 }
